@@ -12,7 +12,7 @@
 	--second-bg-color: #202020;
 	--text-color: #fff;
 	--second-color: #ccc;
-	--main-color: #753c91;
+	--main-color: #53a0c9;
 	--big-font: 5rem;
 	--h2-font: 3rem;
 	--p-font: 1.1rem;
@@ -74,11 +74,11 @@ section{
 }
 .home{
 	position: relative;
-	height: 100vh;
+	height: 90vh;
 	width: 100%;
-	background-image: url(./coding\ pic.pdf);
+	background-image: url(best\ headshot.png);
 	background-size: cover;
-	background-position: center;
+	background-position: right
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
@@ -176,9 +176,10 @@ header.sticky{
 }
 
 .about{
-	display: grid;
+	text-align: center;
+	display:grid;
 	grid-template-columns: repeat(2, 1fr);
-	align-items: center;
+	align-items:stretch;
 	gap: 1.5rem;
 }
 .about-img img{
@@ -188,23 +189,64 @@ header.sticky{
 	border-radius: 8px;
 }
 .about-text h2{
-	font-size: var(--h2-font);
+	font-size: var(--h1-font);
 	line-height: 1;
+
 }
 .about-text h4{
 	font-size: 24px;
-	font-weight: 600;
+	font-weight: 1600;
 	color: var(--text-color);
 	line-height: 1.7;
 	margin: 15px 0 30px;
+	text-align: match-parent;
 }
 .about-text p{
 	color: var(--second-color);
 	font-size: var(--p-font);
 	line-height: 1.8;
 	margin-bottom: 4rem;
+	text-align: center;
+}
+body {
+
+    font-family: 'Roboto', sans-serif;
+}
+.mytabs {
+
+	display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+}
+.mytabs input[type="radio"] {
+    display: none;
+}
+.mytabs label {
+    padding: 25px;
+    background: #53a0c9;
+    font-weight: bold;
 }
 
+.mytabs .tab {
+    width: 100%;
+    padding: 20px;
+    background: rgb(55, 53, 53);
+    order: 1;
+    display: none;
+}
+.mytabs .tab h2 {
+    font-size: 3em;
+}
+
+.mytabs input[type='radio']:checked + label + .tab {
+    display: block;
+}
+
+.mytabs input[type="radio"]:checked + label {
+    background: rgb(55, 53, 53);
+}
 .services{
 	background: var(--second-bg-color);
 }
